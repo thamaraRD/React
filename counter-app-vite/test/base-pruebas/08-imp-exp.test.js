@@ -42,8 +42,6 @@ describe("Pruebas en 08-imp-exp", () => {
     const owner = 'Marvel'
     const ownerHero = getHeroesByOwner(owner);
 
-    console.log(ownerHero);
-
     expect( ownerHero ).toEqual([
       { id: 2, name: 'Spiderman', owner: 'Marvel' },
       { id: 5, name: 'Wolverine', owner: 'Marvel' }
