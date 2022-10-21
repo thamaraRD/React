@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { AddCategory } from "./AddCategory";
+import { GifGrid } from "./GifGrid";
 
 export const GifExpertApp = () => {
-  const [categories, setCategories] = useState(["Sailor Moon", "Rugrats"]);
+  const [categories, setCategories] = useState(['Rugrats']);
 
   const handleAddCategory = (onNewValue) => {
     if (
@@ -19,11 +20,9 @@ export const GifExpertApp = () => {
       <h1>GifExpertApp</h1>
       <AddCategory onNewValue={handleAddCategory} />
 
-      <ol>
-        {categories.map((category) => (
-          <li key={category}>{category}</li>
-        ))}
-      </ol>
+      {categories.map((category) => (
+        <GifGrid key={category} category={category} />
+      ))}
     </>
   );
 };
