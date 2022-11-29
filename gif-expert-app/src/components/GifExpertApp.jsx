@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
 import { AddCategory } from "./AddCategory";
 import { GifGrid } from "./GifGrid";
@@ -25,4 +26,8 @@ export const GifExpertApp = () => {
       ))}
     </>
   );
+};
+
+GifExpertApp.PropTypes = {
+  title: PropTypes.string.isRequired
 };
