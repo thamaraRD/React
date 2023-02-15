@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`haciendo testing en el componente <MultipleCustoomHook /> should match to Snapshot 1`] = `
+<div>
+  <h1>
+    BreakingBad Quotes
+  </h1>
+  <hr />
+  <div
+    class="alert alert-warning text-center"
+  >
+    Loading...
+  </div>
+  <button
+    class="btn btn-primary"
+    disabled=""
+  >
+    Next Qoute
+  </button>
+</div>
+`;
