@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { UserContext } from "./UserContext";
 
 const user = {
@@ -7,10 +8,13 @@ const user = {
 }
 
 
+
 export const UserProvider = ({ children }) => {
+
+  const [user, setUser] = useState();
   return (
     <div>
-        <UserContext.Provider value={{ user }}>
+        <UserContext.Provider value={{ user, setUser }}>
             { children }
         </UserContext.Provider>
     </div>
