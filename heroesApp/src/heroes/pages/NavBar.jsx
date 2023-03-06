@@ -1,6 +1,15 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
-export const Navbar = () => {
+export const NavBar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate('/login', {
+      replace: true
+    });
+  };
+
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
       <Link className="navbar-brand ms-2" to="/">
@@ -25,7 +34,8 @@ export const Navbar = () => {
         Thamara
       </span>
       <button
-      className="nav-item nav-link btn btn-outline-info"
+      className="nav-item nav-link btn btn-outline-info me-2"
+      onClick={handleLogout}
       >
         Logout
       </button>
