@@ -10,8 +10,11 @@ export const Hero = () => {
   const hero = useMemo( ()=> getHeroById(id), [ id ] );
 
   const onNavigateBack = () =>{
-  navigate("/");
+    hero.publisher == 'DC Comics' ? navigate('/dc') : navigate('/marvel');
   }
+
+  //Tambien se podría utilizar la opcion de "navigate(-1)" para regresar justamente
+  //a la pág anterior.
 
  if (!hero){
   return < Navigate to="/marvel" />
@@ -44,7 +47,7 @@ export const Hero = () => {
       className="btn btn-primary"
       onClick={onNavigateBack}
       >
-        Back
+        Atrás
       </button>
     </div>
     </div>
