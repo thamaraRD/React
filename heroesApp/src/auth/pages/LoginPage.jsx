@@ -10,7 +10,7 @@ export const LoginPage = () => {
   const handleLogin = () => {
 
     //Para navegar al último paso antes de cerrar sesion
-    const lastPath = localStorage.getItem('lasthPath') || '/';
+    const lastPath = localStorage.getItem('lastPath') || '/';
 
     login( 'Fulanito' )
     //Se llama desde el navigate
