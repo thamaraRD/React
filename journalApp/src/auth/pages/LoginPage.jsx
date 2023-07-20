@@ -1,12 +1,15 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import {Link as RouterLink} from 'react-router-dom'
 import { Google } from "@mui/icons-material";
 import { Button, Grid, Link, TextField, Typography } from "@mui/material";
 import { AuthLayout } from '../layout/AuthLayout';
 import { useForm } from '../../hooks/useForm';
 import { checkingAutentication, startGoogleSignIn } from '../../store/auth/thunk';
+import { useMemo } from 'react';
 
 export const LoginPage = () => {
+
+  const { status } =useSelector( state => state.auth );
 
   const dispatch = useDispatch();
 
@@ -14,6 +17,8 @@ export const LoginPage = () => {
     email: 'thata@gmail.com',
     password: '123456'
   });
+
+  const isAuthenticating = useMemo()
 
   const onSubmit = ( e ) => {
     e.preventDefault();
